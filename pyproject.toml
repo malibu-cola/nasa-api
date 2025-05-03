@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "nasa-openapi"
+version = "0.1.0"
+description = ""
+authors = ["malibu-cola <ryhrys4269@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.1.0"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.0"
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = []
+
+[tool.ruff.isort]
+known-first-party = ["nasa_openapi"]
